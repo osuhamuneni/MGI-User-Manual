@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MGI User Manual</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Multi-Wavelength Galaxy Illustrator (MGI)</h1>
+            <p>User Manual</p>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <h2>Table of Contents</h2>
+            <ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#versions">MGI Versions</a></li>
+<li><a href="#vr-specs">VR Specifications</a></li>
+<li><a href="#overview">Software Overview</a></li>
+<li><a href="#features">Key Features and Tools</a></li>
+<li><a href="#requirements">System Requirements</a></li>
+<li><a href="#installation">Installation and Configuration</a></li>
+<li><a href="#unity-setup">Unity Setup</a></li>
+<li><a href="#config-files">Configuration Files</a></li>
+<li><a href="#testing">Testing and Deployment</a></li>
+<li><a href="#workflows">Workflows</a></li>
+<li><a href="#troubleshooting">Troubleshooting Guide</a></li>
+<li><a href="#performance">Performance Optimisation</a></li>
+<li><a href="#errors">Common Errors and Fixes</a></li>
+<li><a href="#faq">Frequently Asked Questions</a></li>
+<li><a href="#future">Future Developments</a></li>
+
+            </ul>
+        </nav>
+        <main>
+<section id="introduction">
+<h2>Introduction</h2>
+<p>The Multi-Wavelength Galaxy Illustrator (MGI) is a software framework that provides a set of</p>
+<p>tools for knowledge discovery and exploration of astronomical FITS (Flexible Image</p>
+<p>Transport System) files, with a particular focus on multi-wavelength visualisation of galaxies.</p>
+<p>MGI provides an interactive and immersive environment, supporting users in handling</p>
+<p>multi-wavelength astronomical datasets using both desktop and immersive platforms.</p>
+<p>While primarily designed for astronomical research, MGI&#x27;s capabilities extend to other</p>
+<p>scientific disciplines, where similar data visualisation requirements exist. By leveraging game</p>
+<p>engine technologies and C# programming, the software enables intuitive manipulation and</p>
+<p>exploration of astronomical data.</p>
+<p>The three versions of MGI are:</p>
+<p>• MGI-Desktop: The MGI desktop version provides a fully interactive interface for users to</p>
+<p>visualise and explore FITS files. This version is ideal for those who want a user-friendly</p>
+<p>platform to access and manipulate multi-wavelength data in a 2D or 3D space.• MGI-VR: A</p>
+<p>virtual reality (VR) version for an immersive experience, allowing astronomers to explore</p>
+<p>galaxies in a 3D space.</p>
+<p>· MGI-VR: The VR version immerses users in a 3D galaxy environment using VR</p>
+<p>headsets such as the Oculus Quest, HTC Vive, or Valve Index. This version supports</p>
+<p>real-time interaction, where users can walk through galaxies and observe astronomical data</p>
+<p>with full immersion.</p>
+<p>&lt;a id=&quot;vr-specs&quot;&gt;&lt;/a&gt;</p>
+<p>&lt;a id=&quot;vr-specs&quot;&gt;&lt;/a&gt;</p>
+</section>
+<section id="versions">
+<h2>MGI Versions</h2>
+</section>
+<section id="vr-specs">
+<h2>VR Specifications</h2>
+<p>:</p>
+<p>● A frame rate of at least 90Hz is required for smooth performance.</p>
+<p>● The prototype achieved a frame rate of 120Hz consistently, ensuring minimal latency</p>
+<p>and a smooth user experience.</p>
+<p>● Uses OpenXR, a universal API standard that bridges VR and AR platforms.</p>
+<p>• MGI-AR: An augmented reality (AR) version, developed at the University of Portsmouth,</p>
+<p>suitable for interactive educational and research applications.</p>
+<p>MGI was developed in collaboration with researchers at INAF - Italy.</p>
+<p>For further inquiries, contact David Amuneni at osuhamuneni@gmail.com. A link to a</p>
+<p>YouTube video demoing a whole software interaction is at https://youtu.be/Dto6QBzXBbg</p>
+<p>&lt;a id=&quot;overview&quot;&gt;&lt;/a&gt;</p>
+<p>&lt;a id=&quot;overview&quot;&gt;&lt;/a&gt;</p>
+</section>
+<section id="overview">
+<h2>Software Overview</h2>
+<p>The fundamental goal of MGI is to enable the scientific visualisation and interrogation of 2D</p>
+<p>FITS files within a 3D-rendered environment. This approach facilitates a deeper</p>
+<p>understanding of complex multi-wavelength datasets and introduces new possibilities for</p>
+<p>interactive research. Among the suggested tools are features for immersive exploration,</p>
+<p>modification, and interaction with astronomical datasets.</p>
+<p>&lt;a id=&quot;features&quot;&gt;&lt;/a&gt;</p>
+<p>&lt;a id=&quot;features&quot;&gt;&lt;/a&gt;</p>
+</section>
+<section id="features">
+<h2>Key Features and Tools</h2>
+<p>● FITS File Visualization Interface: A tool for visualising FITS files stored in data</p>
+<p>archives like the Sloan Digital Sky Survey (SDSS), allowing for immersive</p>
+<p>viewing of stellar objects, galaxies, and cosmic structures.</p>
+<p>● Image Manipulation: Tools to manipulate image attributes (e.g., colour</p>
+<p>mapping of specific features like density or galaxy age).</p>
+<p>Image manipulation buttons in the GUI.</p>
+<p>● Interactive Tools: Real-time interactive tools for seamless navigation and data</p>
+<p>exploration, scalable to accommodate many galaxies.</p>
+<p>Input Box for csv files</p>
+<p>VR Navigation in MGI-VR</p>
+<p>● User-Generated Content: Features for adding user-generated content such as</p>
+<p>descriptive text.</p>
+<p>Code Base and Software Versions</p>
+<p>MGI is an open-source project, with its full source code available on GitHub. Installation</p>
+<p>instructions and dependencies are detailed in the installation and configuration section.</p>
+<p>&lt;a id=&quot;requirements&quot;&gt;&lt;/a&gt;</p>
+<p>&lt;a id=&quot;requirements&quot;&gt;&lt;/a&gt;</p>
+</section>
+<section id="requirements">
+<h2>System Requirements</h2>
+<p>The system requirements for different MGI versions are outlined below:</p>
+<p>MGI-Desktop</p>
+<p>• Windows 10 or later</p>
+<p>• Intel Core i5 or equivalent</p>
+<p>• 8GB RAM</p>
+<p>• NVIDIA GTX 1050 or higher</p>
+<p>• 5GB storage</p>
+<p>MGI-VR</p>
+<p>• Windows 10 or later</p>
+<p>• Intel Core i7 or equivalent</p>
+<p>• 16GB RAM</p>
+<p>• NVIDIA GTX 1070 or higher</p>
+<p>• 10GB storage</p>
+<p>MGI-AR</p>
+<p>• Windows 10 Holographic</p>
+<p>• Microsoft HoloLens or compatible device</p>
+<p>• 16GB RAM (32GB recommended)</p>
+<p>&lt;a id=&quot;installation&quot;&gt;&lt;/a&gt;</p>
+<p>&lt;a id=&quot;installation&quot;&gt;&lt;/a&gt;</p>
+</section>
+<section id="installation">
+<h2>Installation and Configuration</h2>
+<p>The MGI software is in active development, and effort is made to make the deployed software</p>
+<p>bug-free. However, bug reports and feature requests are welcome on GitHub</p>
+<p>(https://github.com/osuhamuneni/MGI-DESKTOP-VR).</p>
+<p>Executable</p>
+<p>To install MGI-Desktop and MGI-VR, follow these steps:</p>
+<p>• Download the appropriate version from the official GitHub repository.</p>
+<p>• To start the software, double-click on the executable MGI-VR file</p>
+<p>• Launch MGI and load FITS files for exploration.</p>
+<p>The MGI-AR does not have the built version, as it is built specifically for the CCIXR lab at the</p>
+<p>University of Portsmouth. However, a basic visualiser has been created that can be adopted</p>
+<p>by other AR display screens. The link to the basic visualiser is at</p>
+<p>(https://github.com/osuhamuneni/BASIC-VISUALISER)</p>
+<p>For advanced users building from source:</p>
+<p>As a Unity-based virtual reality application, MGI-VR requires several setup steps to compile and</p>
+<p>run from source. Currently, due to VR hardware and driver limitations on Unix-based systems,</p>
+<p>MGI-VR is supported only on Windows. Support for other platforms will be evaluated as the VR</p>
+<p>ecosystem evolves.</p>
+<p>Prerequisites</p>
+<p>1. Install Unity</p>
+<p>• Download Unity Hub for Windows from the Unity website and install it.</p>
+<p>• Within Unity Hub, install Unity version 2021.3.xf1, where x is the latest available patch</p>
+<p>number in that series.</p>
+<p>• For development consistency, MGI-VR currently targets Unity 2021.3.xf1. Future version</p>
+<p>upgrades will be considered at major release milestones.</p>
+<p>2. Install CMake</p>
+<p>• Download and install CMake for Windows from https://cmake.org/download.</p>
+<p>• Confirm CMake is installed correctly by running the following command in PowerShell or</p>
+<p>Command Prompt:</p>
+<p>Download MGI-VR Source Code</p>
+<p>• Clone or download the MGI-VR source code from the official</p>
+<p>(https://github.com/osuhamuneni/MGI-DESKTOP-VR)</p>
+<p>• You can use any Git client, such as GitHub Desktop or Git Extensions, or download the</p>
+<p>ZIP archive directly.</p>
+<p>Steps to Set Up VR Input Actions with OpenXR in Unity</p>
+<p>1. Enable Required Packages</p>
+<p>Make sure the following packages are installed via Unity Package Manager:</p>
+<p>• XR Plugin Management</p>
+<p>• OpenXR Plugin</p>
+<p>• Input System</p>
+<p>• XR Interaction Toolkit (recommended for easier interaction logic)</p>
+<p>To do this:</p>
+<p>• Go to Window → Package Manager</p>
+<p>• Install the required packages (enable &quot;Show Preview Packages&quot; if needed)</p>
+<p>2. Enable OpenXR in XR Plugin Management</p>
+<p>• Go to Edit → Project Settings → XR Plug-in Management</p>
+<p>• Under Windows enable OpenXR</p>
+<p>• Then go to OpenXR → Features and enable:</p>
+<p>o Interaction Profiles (e.g., Oculus Touch Controller, HP Reverb, etc.)</p>
+<p>o Hand Tracking or Eye Gaze if needed</p>
+<p>3. Set Up Input Actions (Using Unity Input System)</p>
+<p>Option 1: Use Unity&#x27;s Input System (manually)</p>
+<p>1. Create a new Input Actions Asset:</p>
+<p>o Right-click in Project window → Create → Input Actions</p>
+<p>o Name it, e.g., XRInputActions.inputactions</p>
+<p>2. Define action maps:</p>
+<p>o For example: XRController</p>
+<p>o Add actions like Grip, Trigger, Thumbstick, etc.</p>
+<p>o Set their bindings to appropriate control paths:</p>
+<p>§ E.g., &lt;XRController&gt;{LeftHand}/trigger</p>
+<p>§ E.g., &lt;XRController&gt;{RightHand}/grip</p>
+<p>3. Save the asset and generate the C# class (click &quot;Generate C# Class&quot; in the Input Actions</p>
+<p>inspector).</p>
+<p>5. Build Settings</p>
+<p>• Ensure the build target is Windows and OpenXR is selected</p>
+<p>• Go to File → Build Settings → Player Settings</p>
+<p>o Under XR Plug-in Management → OpenXR, check that the relevant interaction</p>
+<p>profiles are enabled.</p>
+<p>• Click the Build button and select your destination folder.</p>
+<p>Use of the &lt;a id=&quot;config-files&quot;&gt;&lt;/a&gt;</p>
+<p>&lt;a id=&quot;config-files&quot;&gt;&lt;/a&gt;</p>
+</section>
+<section id="unity-setup">
+<h2>Unity Setup</h2>
+</section>
+<section id="config-files">
+<h2>Configuration Files</h2>
+<p>At the start of the MGI-VR a configuration screen is provide to give options to the user . The user</p>
+<p>can modify this file to customise the software to their needs. The configuration file</p>
+<p>has the following settings that can be modified:</p>
+<p>Colourisation Mode: Colouration is managed through the application of colour mapping or</p>
+<p>colour transfer functions, thereby enabling the customisation of chromatic attributes.</p>
+<p>Spatial Scaling of Galaxies: Spatial scaling of the galaxies within the scene world is</p>
+<p>mandated to ensure proportional representation. This can be achieved through either a</p>
+<p>uniform scaling parameter for simplicity or via utilising the Petrosian radius as a scaling</p>
+<p>metric.</p>
+<p>Cropping of Galaxies: Provide options for cropping out faint stars and celestial bodies at</p>
+<p>the outer edges of the galaxy.</p>
+<p>Denoising of Galaxies: Denoising of galaxies provides options to empower users to</p>
+<p>prototype specific visualisation types for galaxies, providing a means to determine the</p>
+<p>appearance of galaxies in the scene.</p>
+<p>6. &lt;a id=&quot;testing&quot;&gt;&lt;/a&gt;</p>
+<p>&lt;a id=&quot;testing&quot;&gt;&lt;/a&gt;</p>
+</section>
+<section id="testing">
+<h2>Testing and Deployment</h2>
+<p>:</p>
+<p>o Run unit tests and validate output consistency.</p>
+<p>o Deploy the application for research or interactive use.</p>
+<p>7. &lt;a id=&quot;workflows&quot;&gt;&lt;/a&gt;</p>
+<p>&lt;a id=&quot;workflows&quot;&gt;&lt;/a&gt;</p>
+</section>
+<section id="workflows">
+<h2>Workflows</h2>
+<p>MGI supports different workflows tailored to varying user needs:</p>
+<p>Workflow 1: Basic Visualization Designed for users who want to explore astronomical data</p>
+<p>quickly and easily. With a focus on straightforward visualisation, this workflow allows users to</p>
+<p>load and view FITS files with minimal customisation.</p>
+<p>Workflow 2: Prototyping of Visualizations This workflow enables users to experiment with</p>
+<p>visualisations, adjusting various parameters such as colour mapping, scale, and visual</p>
+<p>effects. Ideal for researchers and advanced users looking to prototype custom visualisations.</p>
+<p>Workflow 3: Repurposing the MGI Framework For developers and researchers who want to</p>
+<p>extend MGI’s functionality or create entirely new tools, this workflow provides full access to</p>
+<p>the MGI framework. Users can modify the C# code to build custom tools or integrate external</p>
+<p>datasets.</p>
+<p>8. &lt;a id=&quot;troubleshooting&quot;&gt;&lt;/a&gt;</p>
+<p>&lt;a id=&quot;troubleshooting&quot;&gt;&lt;/a&gt;</p>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting Guide</h2>
+<p>1. Installation Issues</p>
+<p>● Ensure all system requirements are met before installing MGI.</p>
+<p>● Check that the latest version of Microsoft Visual C++ Redistributable is installed.</p>
+<p>● Ensure Unity runtime libraries are properly configured for advanced users building</p>
+<p>from source.</p>
+<p>9. &lt;a id=&quot;performance&quot;&gt;&lt;/a&gt;</p>
+<p>&lt;a id=&quot;performance&quot;&gt;&lt;/a&gt;</p>
+</section>
+<section id="performance">
+<h2>Performance Optimisation</h2>
+<p>● Close unnecessary applications to free up system memory.</p>
+<p>● Lower graphical settings in MGI for improved performance on lower-end hardware.</p>
+<p>● Update GPU drivers to ensure compatibility with rendering requirements.</p>
+<p>3. &lt;a id=&quot;errors&quot;&gt;&lt;/a&gt;</p>
+<p>&lt;a id=&quot;errors&quot;&gt;&lt;/a&gt;</p>
+</section>
+<section id="errors">
+<h2>Common Errors and Fixes</h2>
+<p>● MGI does not launch: Ensure all dependencies are installed, including .NET</p>
+<p>Framework and Unity libraries.</p>
+<p>● VR headset not detected: Verify SteamVR or Oculus runtime is running before</p>
+<p>launching MGI.</p>
+<p>● FITS file does not load: Ensure the file format is standard and not corrupted.</p>
+<p>&lt;a id=&quot;faq&quot;&gt;&lt;/a&gt;</p>
+<p>&lt;a id=&quot;faq&quot;&gt;&lt;/a&gt;</p>
+</section>
+<section id="faq">
+<h2>Frequently Asked Questions</h2>
+<p>(FAQs)</p>
+<p>1. Can I use MGI without a VR headset?</p>
+<p>Yes, MGI-Desktop provides full functionality without requiring VR hardware.</p>
+<p>2. Does MGI support real-time collaboration?</p>
+<p>Currently, MGI does not support multi-user collaboration but future updates may include this</p>
+<p>feature.</p>
+<p>3. Can I export visualisations as images or videos?</p>
+<p>Yes, MGI allows exporting high-resolution images of visualised galaxies.</p>
+<p>&lt;a id=&quot;future&quot;&gt;&lt;/a&gt;</p>
+<p>&lt;a id=&quot;future&quot;&gt;&lt;/a&gt;</p>
+</section>
+<section id="future">
+<h2>Future Developments</h2>
+<p>● Cloud-Based Data Integration: Access large astronomical datasets via cloud</p>
+<p>storage (Expected 2027).</p>
+<p>● Enhanced AR Capabilities ( Expected 2026): Support for multiple AR headsets.</p>
+<p>● Collaboration Features (Expected 2026): Multi-user interaction for collaborative</p>
+<p>research.</p>
+</section>
+
+        <div class="youtube">
+            📺 Watch the demo: <a href="https://youtu.be/Dto6QBzXBbg" target="_blank">MGI Software Demo</a>
+        </div>
+        </main>
+    </div>
+    <footer>
+        <p>Designed by INAF - Italy and University of Portsmouth • Contact: osuhamuneni@gmail.com</p>
+    </footer>
+</body>
+</html>
