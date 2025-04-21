@@ -123,3 +123,36 @@ ul li {
 main {
     line-height: 1.8;
 }
+/* Make numbered lists (ol) easier to read */
+ol {
+  padding-left: 1.5rem;
+}
+
+ol li {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+/* Improve paragraph layout */
+main p {
+  text-align: justify;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+/* Optional: soften container width for readability */
+.container {
+  max-width: 960px;
+  padding: 2rem;
+}
+
+/* Optional: mobile-friendly tweaks */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+
+  ol li {
+    margin-bottom: 1rem;
+  }
+}
